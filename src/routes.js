@@ -10,4 +10,7 @@ routes.get('/', function (req, res) {
   return res.json({ serverRunning: true });
 });
 
+routes.get('/user/:id', UserController.index);
+routes.put('/user/:id', UserController.update);
+
 export default routes;
